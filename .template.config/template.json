@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Sam Vanwelsenaere",
+    "classifications": [ "WebApi" ],
+    "identity": "SamVw.Template.WebApi.CSharp",
+    "name": "Clean architecture AspNetCore Web Api",
+    "shortName": "clean-webapi",
+	"sourceName": "CleanArchitectureWebApi", 
+	"preferNameDirectory" : "true",
+	"tags": {
+		"language": "C#"         
+	}
+}
