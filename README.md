@@ -1,4 +1,4 @@
-# AspNetCore_CleanArchitecture_Template
+# AspNetCore_CleanArchitecture_Template (IN PROGRESS)
 
 A template for Asp.Net Core that will help you structure your project in a flexible and scalable way.
 Based on NorthwindTraders from JasonGT (https://github.com/JasonGT/NorthwindTraders)
