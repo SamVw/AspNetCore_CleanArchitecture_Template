@@ -11,6 +11,8 @@ Based on NorthwindTraders from JasonGT (https://github.com/JasonGT/NorthwindTrad
 
 ### Step 2: Install the template
 
+`cd ./CleanArchtitectureWebApi`
+
 `dotnet new -i .`
 
 ### Step 3: Create a new project
