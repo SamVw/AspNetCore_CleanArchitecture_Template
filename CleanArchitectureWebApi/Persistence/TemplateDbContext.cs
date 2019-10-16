@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Application.Common.Interfaces;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Persistence
 {
@@ -19,6 +20,8 @@ namespace Persistence
         {
             return base.SaveChangesAsync(cancellationToken);
         }
+
+        public override DatabaseFacade Database => base.Database;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

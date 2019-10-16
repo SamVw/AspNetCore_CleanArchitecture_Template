@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Domain.Entities;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Application.Common.Interfaces
 {
@@ -14,5 +15,7 @@ namespace Application.Common.Interfaces
         DbSet<TemplateEntity> TemplateEntities { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
+
+        DatabaseFacade Database { get; }
     }
 }

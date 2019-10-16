@@ -4,19 +4,22 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.Sytem.Commands.SeedSampleData;
 using MediatR;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Persistence;
 
 namespace WebUI
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var host = CreateWebHostBuilder(args).Build();
 
@@ -27,12 +30,12 @@ namespace WebUI
                 try
                 {
                     // MIGRATE DATABASE
-                    // var templateContext = services.GetRequiredService<TemplateDbContext>();
-                    // templateContext.Database.Migrate();
+                    var templateContext = services.GetRequiredService<TemplateDbContext>(); 
+                    templateContext.Database.Migrate();
 
                     // SEED DATABASE
-                    // var mediator = services.GetRequiredService<IMediator>();
-                    // await mediator.Send(new SeedSampleDataCommand(), CancellationToken.None);
+                    var mediator = services.GetRequiredService<IMediator>();
+                    await mediator.Send(new SeedSampleDataCommand(), CancellationToken.None);
                 }
                 catch (Exception ex)
                 {
