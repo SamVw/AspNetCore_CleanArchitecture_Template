@@ -10,6 +10,5 @@ namespace Application.TemplateFeature.Queries
 {
     public class GetTemplateAllQuery : IRequest<TemplateAllVm>
     {
-        
     }
 }

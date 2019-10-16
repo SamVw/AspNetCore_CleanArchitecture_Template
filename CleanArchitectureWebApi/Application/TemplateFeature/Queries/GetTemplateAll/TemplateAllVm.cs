@@ -8,6 +8,6 @@ namespace Application.TemplateFeature.Queries.GetTemplateAll
 {
     public class TemplateAllVm
     {
-        public List<string> Templates { get; set; }
+        public List<TemplateDto> Templates { get; set; }
     }
 }
