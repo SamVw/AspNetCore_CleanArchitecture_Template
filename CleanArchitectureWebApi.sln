@@ -3,27 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "CleanArchitectureWebApi\WebUI\WebUI.csproj", "{4D781F12-A61A-4B7C-A4C7-640D08A17775}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "Src\WebUI\WebUI.csproj", "{4D781F12-A61A-4B7C-A4C7-640D08A17775}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "CleanArchitectureWebApi\Domain\Domain.csproj", "{3F66E82E-0B47-4457-8EFB-8AD93D32BBAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Src\Domain\Domain.csproj", "{3F66E82E-0B47-4457-8EFB-8AD93D32BBAE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "CleanArchitectureWebApi\Application\Application.csproj", "{DD57FCC0-1D9C-409C-B95F-A1B8A3EEB325}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Src\Application\Application.csproj", "{DD57FCC0-1D9C-409C-B95F-A1B8A3EEB325}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "CleanArchitectureWebApi\Persistence\Persistence.csproj", "{2C67D934-9EB5-4E9C-8812-F4E2650445E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Src\Persistence\Persistence.csproj", "{2C67D934-9EB5-4E9C-8812-F4E2650445E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "CleanArchitectureWebApi\Infrastructure\Infrastructure.csproj", "{C6AD206D-6691-4501-83BB-FF513BD3EEB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Src\Infrastructure\Infrastructure.csproj", "{C6AD206D-6691-4501-83BB-FF513BD3EEB6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "CleanArchitectureWebApi\Common\Common.csproj", "{3AF11E15-9FE1-4E6A-8AA8-F42DD464867D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Src\Common\Common.csproj", "{3AF11E15-9FE1-4E6A-8AA8-F42DD464867D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6A5B17E7-8171-4893-913D-1C82EB6C33D8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6A5B17E7-8171-4893-913D-1C82EB6C33D8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.UnitTests", "Application.UnitTests\Application.UnitTests.csproj", "{72380BDB-6458-4126-8095-A9A56F232852}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.UnitTests", "Tests\Application.UnitTests\Application.UnitTests.csproj", "{72380BDB-6458-4126-8095-A9A56F232852}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.UnitTests", "Domain.UnitTests\Domain.UnitTests.csproj", "{96DC499C-3B9B-442D-8283-1C8B1264100F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.UnitTests", "Tests\Domain.UnitTests\Domain.UnitTests.csproj", "{96DC499C-3B9B-442D-8283-1C8B1264100F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence.IntegrationTests", "Persistence.IntegrationTests\Persistence.IntegrationTests.csproj", "{79A6C919-345E-40C4-9CC2-81B233D9A57F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence.IntegrationTests", "Tests\Persistence.IntegrationTests\Persistence.IntegrationTests.csproj", "{79A6C919-345E-40C4-9CC2-81B233D9A57F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI.IntegrationTests", "WebUI.IntegrationTests\WebUI.IntegrationTests.csproj", "{51CC5FC2-3665-452D-B0FC-AE57EB945E0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI.IntegrationTests", "Tests\WebUI.IntegrationTests\WebUI.IntegrationTests.csproj", "{51CC5FC2-3665-452D-B0FC-AE57EB945E0D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B58C74F3-FAA4-428C-92B5-EB1A38F21966}"
 EndProject
@@ -32,6 +32,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persis", "Persis", "{C72E9AC2-B0D6-4C72-909E-DD1EBC5FBC53}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{143EE2FB-2086-4897-BEEE-529DFA287EC2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{FEFFCC20-8E18-4312-A35E-D1D37BAC0BA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,6 +96,10 @@ Global
 		{96DC499C-3B9B-442D-8283-1C8B1264100F} = {6A5B17E7-8171-4893-913D-1C82EB6C33D8}
 		{79A6C919-345E-40C4-9CC2-81B233D9A57F} = {6A5B17E7-8171-4893-913D-1C82EB6C33D8}
 		{51CC5FC2-3665-452D-B0FC-AE57EB945E0D} = {6A5B17E7-8171-4893-913D-1C82EB6C33D8}
+		{B58C74F3-FAA4-428C-92B5-EB1A38F21966} = {FEFFCC20-8E18-4312-A35E-D1D37BAC0BA0}
+		{C2E5B9EA-4B46-4CF2-9FDD-B0D195A3E244} = {FEFFCC20-8E18-4312-A35E-D1D37BAC0BA0}
+		{C72E9AC2-B0D6-4C72-909E-DD1EBC5FBC53} = {FEFFCC20-8E18-4312-A35E-D1D37BAC0BA0}
+		{143EE2FB-2086-4897-BEEE-529DFA287EC2} = {FEFFCC20-8E18-4312-A35E-D1D37BAC0BA0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {653602BC-02E3-4564-98F0-2566F1258A84}
