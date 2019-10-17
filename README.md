@@ -3,6 +3,10 @@
 A template for Asp.Net Core that will help you structure your project in a flexible and scalable way.
 Based on NorthwindTraders from JasonGT (https://github.com/JasonGT/NorthwindTraders)
 
+## Documentation
+
+https://github.com/JasonGT/NorthwindTraders/blob/master/Docs/Slides.pdf
+
 ## How to use this template
 
 ### Step 1: Clone to your computer
