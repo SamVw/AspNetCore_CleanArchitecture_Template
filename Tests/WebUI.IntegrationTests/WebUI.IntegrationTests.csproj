@@ -22,4 +22,9 @@
     <ProjectReference Include="..\CleanArchitectureWebApi\WebUI\WebUI.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>

@@ -13,4 +13,9 @@
     <PackageReference Include="coverlet.collector" Version="1.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="TestResults\157335d5-b08a-40da-b98e-8294d9e77555\" />
+    <Folder Include="TestResults\7ae79af9-be0e-4992-ae0c-a6a08491c6a2\" />
+  </ItemGroup>
+
 </Project>
