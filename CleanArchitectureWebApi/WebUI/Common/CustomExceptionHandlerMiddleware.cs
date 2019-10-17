@@ -46,7 +46,7 @@ namespace WebUI.Common
                     break;
                 case BadRequestException badRequestException:
                     code = HttpStatusCode.BadRequest;
-                    result = badRequestException.Message;
+                    result = JsonConvert.SerializeObject(new { Error = badRequestException.Message });
                     break;
                 case NotFoundException _:
                     code = HttpStatusCode.NotFound;

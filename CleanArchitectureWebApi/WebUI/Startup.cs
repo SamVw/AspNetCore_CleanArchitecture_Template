@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Application;
 using Application.Common.Interfaces;
+using FluentValidation.AspNetCore;
 using Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,6 +17,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Persistence;
+using WebUI.Common;
 using WebUI.Services;
 
 namespace WebUI
@@ -36,9 +38,16 @@ namespace WebUI
             services.AddPersistence(Configuration);
             services.AddApplication();
 
+            services.AddHealthChecks().AddDbContextCheck<TemplateDbContext>();
+
             services.AddScoped<ICurrentUserService, CurrentUserService>();
 
             services.AddHttpContextAccessor();
+
+            services
+                .AddControllersWithViews()
+                .AddNewtonsoftJson()
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<ITemplateDbContext>());
 
             services.Configure<ApiBehaviorOptions>(options =>
             {
@@ -61,6 +70,8 @@ namespace WebUI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCustomExceptionHandler();
+            app.UseHealthChecks("/health");
             app.UseHttpsRedirection();
 
             app.UseRouting();

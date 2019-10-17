@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.Common.Exceptions;
 using FluentValidation;
 using MediatR;
 using ValidationContext = System.ComponentModel.DataAnnotations.ValidationContext;
+using ValidationException = Application.Common.Exceptions.ValidationException;
 
 namespace Application.Common.Behaviours
 {
@@ -25,7 +27,7 @@ namespace Application.Common.Behaviours
             var context = new ValidationContext(request);
 
             var failures = _validators
-                .Select(v => v.Validate(context))
+                .Select(v => v.Validate(context.ObjectInstance))
                 .SelectMany(result => result.Errors)
                 .Where(f => f != null)
                 .ToList();
