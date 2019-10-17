@@ -22,3 +22,14 @@ https://github.com/JasonGT/NorthwindTraders/blob/master/Docs/Slides.pdf
 ### Step 3: Create a new project
 
 `dotnet new clean-webapi -n {YOUR PROJECT NAME} -o {YOUR PROJECT NAME}`
+
+## Used libraries
+
+- Automapper
+- FluentAssertions
+- FluentValidation
+- MediatR
+- NSwag
+- xUnit
+- Moq
+- EF Core
