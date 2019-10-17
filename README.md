@@ -3,6 +3,10 @@
 A template for Asp.Net Core that will help you structure your project in a flexible and scalable way.
 Based on NorthwindTraders from JasonGT (https://github.com/JasonGT/NorthwindTraders)
 
+## Documentation
+
+https://github.com/JasonGT/NorthwindTraders/blob/master/Docs/Slides.pdf
+
 ## How to use this template
 
 ### Step 1: Clone to your computer
@@ -18,3 +22,14 @@ Based on NorthwindTraders from JasonGT (https://github.com/JasonGT/NorthwindTrad
 ### Step 3: Create a new project
 
 `dotnet new clean-webapi -n {YOUR PROJECT NAME} -o {YOUR PROJECT NAME}`
+
+## Used libraries
+
+- Automapper
+- FluentAssertions
+- FluentValidation
+- MediatR
+- NSwag
+- xUnit
+- Moq
+- EF Core
