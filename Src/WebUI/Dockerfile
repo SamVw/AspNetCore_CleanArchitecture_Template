@@ -6,11 +6,11 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster AS build
 WORKDIR /src
 COPY ["Src/WebUI/WebUI.csproj", "Src/WebUI/"]
-COPY ["Src/Common/Common.csproj", "Src/Common/"]
-COPY ["Src/Persistence/Persistence.csproj", "Src/Persistence/"]
-COPY ["Src/Application/Application.csproj", "Src/Application/"]
-COPY ["Src/Domain/Domain.csproj", "Src/Domain/"]
-COPY ["Src/Infrastructure/Infrastructure.csproj", "Src/Infrastructure/"]
+COPY ["Src/WebUI/Src/Persistence/Persistence.csproj", "Src/WebUI/Src/Persistence/"]
+COPY ["Src/WebUI/Src/Application/Application.csproj", "Src/WebUI/Src/Application/"]
+COPY ["Src/WebUI/Src/Domain/Domain.csproj", "Src/WebUI/Src/Domain/"]
+COPY ["Src/WebUI/Src/Common/Common.csproj", "Src/WebUI/Src/Common/"]
+COPY ["Src/WebUI/Src/Infrastructure/Infrastructure.csproj", "Src/WebUI/Src/Infrastructure/"]
 RUN dotnet restore "Src/WebUI/WebUI.csproj"
 COPY . .
 WORKDIR "/src/Src/WebUI"
