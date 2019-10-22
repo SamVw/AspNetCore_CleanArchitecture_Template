@@ -5,15 +5,15 @@ VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "Src\WebUI\WebUI.csproj", "{4D781F12-A61A-4B7C-A4C7-640D08A17775}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Src\Domain\Domain.csproj", "{3F66E82E-0B47-4457-8EFB-8AD93D32BBAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Src\WebUI\Src\Domain\Domain.csproj", "{3F66E82E-0B47-4457-8EFB-8AD93D32BBAE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Src\Application\Application.csproj", "{DD57FCC0-1D9C-409C-B95F-A1B8A3EEB325}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Src\WebUI\Src\Application\Application.csproj", "{DD57FCC0-1D9C-409C-B95F-A1B8A3EEB325}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Src\Persistence\Persistence.csproj", "{2C67D934-9EB5-4E9C-8812-F4E2650445E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Src\WebUI\Src\Persistence\Persistence.csproj", "{2C67D934-9EB5-4E9C-8812-F4E2650445E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Src\Infrastructure\Infrastructure.csproj", "{C6AD206D-6691-4501-83BB-FF513BD3EEB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Src\WebUI\Src\Infrastructure\Infrastructure.csproj", "{C6AD206D-6691-4501-83BB-FF513BD3EEB6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Src\Common\Common.csproj", "{3AF11E15-9FE1-4E6A-8AA8-F42DD464867D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Src\WebUI\Src\Common\Common.csproj", "{3AF11E15-9FE1-4E6A-8AA8-F42DD464867D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6A5B17E7-8171-4893-913D-1C82EB6C33D8}"
 EndProject
@@ -27,13 +27,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI.IntegrationTests", "T
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B58C74F3-FAA4-428C-92B5-EB1A38F21966}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infra", "{C2E5B9EA-4B46-4CF2-9FDD-B0D195A3E244}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{C2E5B9EA-4B46-4CF2-9FDD-B0D195A3E244}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persis", "{C72E9AC2-B0D6-4C72-909E-DD1EBC5FBC53}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{C72E9AC2-B0D6-4C72-909E-DD1EBC5FBC53}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{143EE2FB-2086-4897-BEEE-529DFA287EC2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{FEFFCC20-8E18-4312-A35E-D1D37BAC0BA0}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{032F7CA2-8D95-4716-814D-66426E7A37AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{51CC5FC2-3665-452D-B0FC-AE57EB945E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51CC5FC2-3665-452D-B0FC-AE57EB945E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51CC5FC2-3665-452D-B0FC-AE57EB945E0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{032F7CA2-8D95-4716-814D-66426E7A37AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{032F7CA2-8D95-4716-814D-66426E7A37AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{032F7CA2-8D95-4716-814D-66426E7A37AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{032F7CA2-8D95-4716-814D-66426E7A37AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,7 +5,15 @@
     <UserSecretsId>43100a3d-14dd-4710-87b4-0afd8f104cb0</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Src\**" />
+    <Content Remove="Src\**" />
+    <EmbeddedResource Remove="Src\**" />
+    <None Remove="Src\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="7.0.0" />
@@ -24,9 +32,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj" />
-    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
-    <ProjectReference Include="..\Persistence\Persistence.csproj" />
+
+    <ProjectReference Include="Src\Application\Application.csproj" />
+    <ProjectReference Include="Src\Common\Common.csproj" />
+    <ProjectReference Include="Src\Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="Src\Persistence\Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
 
 </Project>
