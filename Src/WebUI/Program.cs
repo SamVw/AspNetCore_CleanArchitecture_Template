@@ -62,15 +62,6 @@ namespace WebUI
                     {
                         config.AddCommandLine(args);
                     }
-
-                    if (env.IsDevelopment())
-                    {
-                        var appAssembly = Assembly.Load(new AssemblyName(env.ApplicationName));
-                        if (appAssembly != null)
-                        {
-                            config.AddUserSecrets(appAssembly, optional: false);
-                        }
-                    }
                 })
                 .UseStartup<Startup>();
                 

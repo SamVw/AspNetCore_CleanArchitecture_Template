@@ -15,13 +15,8 @@ namespace Persistence
     {
         public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
-            var builder = new SqlConnectionStringBuilder(
-                configuration.GetConnectionString("TemplateDatabase"));
-            builder.Password = configuration["DbPassword"];
-            string connectionString = builder.ConnectionString;
-
             services.AddDbContext<TemplateDbContext>(options =>
-                options.UseSqlServer(connectionString)
+                options.UseSqlServer(configuration.GetConnectionString("TemplateDatabase"))
                     .EnableSensitiveDataLogging());
 
             services.AddScoped<ITemplateDbContext>(provider => provider.GetService<TemplateDbContext>());
